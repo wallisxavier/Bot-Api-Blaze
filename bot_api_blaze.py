@@ -3,11 +3,11 @@ import telegram
 import time
 
 
-TOKEN = 'seu token'
+TOKEN = 'seu token'5851850889:AAGXyKv7xqvg_ad-FRxGbS1DQDwtZu6tb4U
 
 bot = telegram.Bot(TOKEN)
 
-chat_id = 'seu id'
+chat_id = 'seu id'1001971875133
 
 while True:
 
@@ -92,7 +92,7 @@ while True:
 
             text = '''✅ Possivel entrada no 🔴
                  Buscar apoio no ⚪ '''
-            url_base = f'https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={text}'
+            url_base = f'https://api.telegram.org/bot{token}/sendMessage?chat_id={chat_id}&text={text}'1001971875133
             results = requests.get(url_base)
             time.sleep(5)
 
