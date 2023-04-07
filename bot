@@ -1,0 +1,89 @@
+TOKEN  =  '5851850889:AAGXyKv7xqvg_ad-FRxGbS1DQDwtZu6tb4U'
+
+bot  =  telegrama . Bot ( 5851850889:AAGXyKv7xqvg_ad-FRxGbS1DQDwtZu6tb4U )
+
+chat_id  =  '1001971875133'
+
+enquanto  verdadeiro :
+
+    url  =  'https://blaze.com/api/roulette_games/recent'
+
+    resposta  =  solicitações . obter ( url )
+
+    r  =  resposta . json ()
+
+    raio  = []
+
+    para  x  no  intervalo ( len ( r )):
+        val  =  r [ x ][ 'cor' ]
+        se  valor  ==  1 :
+            val  =  'Vermelho'
+
+        se  valor  ==  2 :
+            val  =  'Preto'
+
+        se  valor  ==  0 :
+            val  =  'Branco'
+
+        raio . anexar ( val )
+
+    imprimir ( raio )
+
+    def  resultado ( num ):
+        elif num[0:4] == ['Vermelho', 'Vermelho', 'Vermelho', 'Vermelho']:
+
+            text = '''✅ LOSS'''
+            url_base = f'https://api.telegram.org/bot{5851850889:AAGXyKv7xqvg_ad-FRxGbS1DQDwtZu6tb4U}/sendMessage?chat_id={1001971875133}&text={text}'
+            results = requests.get(url_base)
+            time.sleep(5)
+
+        elif num[0:5] == ['Vermelho', 'Vermelho', 'Vermelho', 'Vermelho', 'Vermelho', ]:
+
+            text = '''✅ Entrada confirmada, entrar no ⚫
+                      Buscar apoio no ⚪'''
+            url_base = f'https://api.telegram.org/bot{5851850889:AAGXyKv7xqvg_ad-FRxGbS1DQDwtZu6tb4U}/sendMessage?chat_id={1001971875133}&text={text}'
+            results = requests.get(url_base)
+            time.sleep(5)
+
+        elif num[0:5] == ['Vermelho', 'Vermelho', 'Vermelho', 'Vermelho', 'Vermelho', ]:
+
+            text = '''✅ Possivel entrada no ⚫
+                Buscar apoio no ⚪'''
+            url_base = f'https://api.telegram.org/bot{5851850889:AAGXyKv7xqvg_ad-FRxGbS1DQDwtZu6tb4U}/sendMessage?chat_id={1001971875133}&text={text}'
+            results = requests.get(url_base)
+            time.sleep(5)
+
+        elif num[0:4] == ['Vermelho', 'Preto', 'Preto', 'Preto']:
+
+            text = '''✅ GREEN no 🔴'''
+            url_base = f'https://api.telegram.org/bot{5851850889:AAGXyKv7xqvg_ad-FRxGbS1DQDwtZu6tb4U}/sendMessage?chat_id={1001971875133}&text={text}'
+            results = requests.get(url_base)
+            time.sleep(5)
+
+        elif num[0:4] == ['Preto', 'Preto', 'Preto', 'Preto']:
+
+            text = '''✅ LOSS'''
+            url_base = f'https://api.telegram.org/bot{5851850889:AAGXyKv7xqvg_ad-FRxGbS1DQDwtZu6tb4U}/sendMessage?chat_id={1001971875133}&text={text}'
+            results = requests.get(url_base)
+            time.sleep(5)
+
+        elif num[0:5] == ['Preto', 'Preto', 'Preto', 'Preto', 'Preto]:
+
+            text = '''✅ Entrada confirmada, entrar no 🔴
+                   Buscar apoio no ⚪'''
+            url_base = f'https://api.telegram.org/bot{5851850889:AAGXyKv7xqvg_ad-FRxGbS1DQDwtZu6tb4U}/sendMessage?chat_id={1001971875133}&text={text}'
+            results = requests.get(url_base)
+            time.sleep(5)
+
+        elif num[0:5] == ['Preto', 'Preto', 'Preto', 'Preto', 'Preto]:
+
+
+            text = '''✅ Possivel entrada no 🔴
+                 Buscar apoio no ⚪ '''
+            url_base = f'https://api.telegram.org/bot{5851850889:AAGXyKv7xqvg_ad-FRxGbS1DQDwtZu6tb4U}/sendMessage?chat_id={1001971875133}&text={text}'
+            results = requests.get(url_base)
+            time.sleep(5)
+
+    resultado ( raio )
+
+    tempo . dormir ( 5 )
